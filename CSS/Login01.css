@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgba(180, 81, 122, 0.582);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;    
+}
+
+/****************************************************************************/
+/* Base Styles */
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    flex-grow: 1;
+  }
+  
+  .logo img {
+    height: 75px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+    gap: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-right: 20px;
+  }
+  
+  li {
+    cursor: pointer;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  li a:hover {
+    color: rgb(241, 44, 143);
+  }
+  
+  .searchbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+  }
+  
+  .searchbar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .searchbar button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    font-size: 20px; /* Adjust icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #search-btn{
+    color: white;
+  }
+  
+  .searchbar button:hover {
+    color: rgb(241, 44, 143); /* Optional hover effect */
+  }
+  
+  .searchbar img {
+    height: 28px;
+  }
+  
+  .navact {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .login {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(243, 12, 147);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .signin {
+    text-decoration: none;
+    background-color: rgb(31, 28, 30);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .login:hover {
+    background-color: rgb(31, 28, 30);
+    color: rgb(243, 12, 147);
+  }
+  
+  .signin:hover {
+    background-color: rgb(243, 12, 147);
+    color: black;
+  }
+  
+  /* Add hidden class for toggling search bar */
+  .hidden {
+    display: none;
+  }
+  
+  /* Adjust for responsive toggle menu */
+  #menu-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    #menu-btn {
+      display: block;
+      padding: 7px;
+    }
+  
+    nav ul {
+      display: none; /* Initially hidden */
+      flex-direction: column;
+      background-color: black;
+      position: absolute;
+      top: 60px;
+      right: 30px;
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 10;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  
+    .logo img {
+      height: 50px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+      margin: 10px 0;
+    }
+  
+    .searchbar {
+      margin: 10px 0;
+      justify-content: center;
+    }
+  
+    .searchbar input {
+      width: 150%;
+    }
+  
+    .searchbar button {
+      padding: 5px;
+    }
+  
+    .searchbar .fa-search {
+      font-size: 20px;
+    }
+  
+    .navact {
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .login,
+    .signin {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      height: 40px;
+    }
+  
+    nav ul {
+      font-size: 14px;
+    }
+  
+    .searchbar input {
+      width: 60%;
+      padding: 6px;
+    }
+  
+    .searchbar button {
+      padding: 4px;
+    }
+  
+    .searchbar .fa-search {
+      font-size: 12px;
+    }
+  
+    .login,
+    .signin {
+      font-size: 12px;
+      padding: 5px 8px;
+    }
+  }
+  
+
+/***********************************************************************/
+/* Footer styling */
+footer {
+    background-color: black;
+    color: #fff; /* White text */
+    padding: 40px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+
+/* Footer sections */
+.footer-section {
+    flex-basis: 24%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+/* Links styling */
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Call section */
+.call-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.call-section p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #ccc; /* Light gray for subtle footer text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-section {
+        flex-basis: 100%;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
+
+/********************************************************************************/
+/*Term&Condition*/
+
+.terms-container {
+    padding: 70px;
+    background-color: #ffa2d5;
+    color: #000000;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(148, 132, 132, 0.1);
+}
+
+.terms-container h1 {
+    color: rgb(243, 12, 147);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-container h2 {
+    color: rgb(31, 28, 30);
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terms-container {
+    padding: 15px;
+  }
+
+  .terms-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .terms-container h2 {
+    font-size: 1.1rem;
+  }
+
+  .terms-container p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-container {
+    padding: 10px;
+  }
+
+  .terms-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .terms-container h2 {
+    font-size: 1rem;
+  }
+
+  .terms-container p {
+    font-size: 0.9rem;
+  }
+
+  .terms-container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+/*******************************************************************************/
+/* login decoration*/
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+}
+
+
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width:400px;    
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333; /* Darker text for readability */
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #333; /* Black icon */
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #333; /* Black border */
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+.input-box input:focus {
+    border-color: #ff00cc; /* Pink focus border */
+    outline: none;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #333; /* Black text */
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff00cc, #333333); /* Pink and black gradient */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.or-signup {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #333; /* Black text */
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff00cc; /* Pink icons */
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #e600b3; /* Darker pink on hover */
+}
+
+
+
+.social-icons .fab.fa-google {
+    background-color: #eb09be; /* Pink Google icon */
+}
+
+.social-icons .fab.fa-google:hover {
+    background-color: #e600b436; /* Darker pink */
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333; /* Black text */
+}
+
+.signup-link a {
+    color: #ff00cc; /* Pink link */
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 20px; /* Adjust padding for tablets and smaller screens */
+    }
+
+    .login-box h2 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    .input-box input {
+        font-size: 12px; /* Adjust input text size */
+    }
+
+    .login-btn {
+        font-size: 14px; /* Adjust button text size */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .social-icons a {
+        font-size: 18px; /* Adjust icon size */
+        padding: 8px; /* Adjust padding for icons */
+    }
+
+    .signup-link {
+        font-size: 12px; /* Adjust signup link size */
+    }
+}
+
+
+/********************************************************************************/
+/*Contact CSS*/
+.contact {
+    position: relative;
+    min-height: 80vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../img/Bus3.jpg);
+    background-size:fill;
+
+    
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #ff00cc;
+}
+
+.contact .content p {
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactInfo {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #ff00cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+}
+
+.contactInfo .box .text {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #ff00cc;
+}
+
+.contactForm {
+    width: 50%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: #ff00cc;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    color: #333;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #ff00cc;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: #ff00cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.contactForm .inputBox input[type="submit"]:hover {
+    background-color: #e600b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .contactInfo {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .contactForm {
+        width: 100%;
+    }
+}
+
+
