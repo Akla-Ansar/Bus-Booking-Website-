@@ -1,0 +1,132 @@
+/*signup*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:rgba(180, 81, 122, 0.582);
+}
+
+.signup-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 100px;
+}
+
+.signup-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height:80vh;
+    text-align: center;
+}
+
+.signup-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+.input-box input:focus {
+    border-color: #ff00cc;
+    outline: none;
+}
+
+.checkbox {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.terms {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff00cc, #333333);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-btn:hover {
+    opacity: 0.9;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-link a {
+    color: #ff00cc;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 50px; /* Reduce padding for tablets */
+    }
+
+    .signup-box {
+        padding: 30px; /* Reduce padding inside the signup box */
+        width: 90%; /* Adjust width for tablets */
+        max-width: 400px; /* Limit max width for tablets */
+    }
+
+    .signup-box h2 {
+        font-size: 20px; /* Reduce heading size */
+    }
+
+    .input-box input {
+        font-size: 12px; /* Adjust input text size */
+        padding: 8px; /* Adjust padding for smaller inputs */
+    }
+
+    .register-btn {
+        font-size: 14px; /* Reduce button font size */
+        padding: 8px; /* Adjust button padding */
+    }
+
+    .login-link {
+        font-size: 12px; /* Adjust login link text size */
+    }
+}
+

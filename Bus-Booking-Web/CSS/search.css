@@ -1,0 +1,393 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(243, 12, 147);
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: url(../img/bg1.jpg);
+}
+/* Base Styles */
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Keeps header visible on scroll */
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    flex-grow: 1;
+  }
+  
+  .logo img {
+    height: 75px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+    gap: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-right: 20px;
+  }
+  
+  li {
+    cursor: pointer;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  li a:hover {
+    color: rgb(241, 44, 143);
+  }
+  
+  .searchbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+  }
+  
+  .searchbar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .searchbar button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    font-size: 20px; /* Adjust icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .searchbar button:hover {
+    color: rgb(241, 44, 143); /* Optional hover effect */
+  }
+  
+  .searchbar img {
+    height: 28px;
+  }
+  
+  .navact {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .login {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(243, 12, 147);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .signin {
+    text-decoration: none;
+    background-color: rgb(31, 28, 30);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .login:hover {
+    background-color: rgb(31, 28, 30);
+    color: rgb(243, 12, 147);
+  }
+  
+  .signin:hover {
+    background-color: rgb(243, 12, 147);
+    color: black;
+  }
+  
+  /* Add hidden class for toggling search bar */
+  .hidden {
+    display: none;
+  }
+  
+  /* Adjust for responsive toggle menu */
+  #menu-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    #menu-btn {
+      display: block;
+      padding: 7px;
+    }
+  
+    nav ul {
+      display: none; /* Initially hidden */
+      flex-direction: column;
+      background-color: black;
+      position: absolute;
+      top: 60px;
+      right: 30px;
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 10;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  
+    .logo img {
+      height: 50px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+      margin: 10px 0;
+    }
+  
+    .searchbar {
+      margin: 10px 0;
+      justify-content: center;
+    }
+  
+    .searchbar input {
+      width: 150%;
+    }
+  
+    .searchbar button {
+      padding: 5px;
+    }
+  
+    .searchbar .fa-search {
+      font-size: 20px;
+    }
+  
+    .navact {
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .login,
+    .signin {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      height: 40px;
+    }
+  
+    nav ul {
+      font-size: 14px;
+    }
+  
+    .searchbar input {
+      width: 60%;
+      padding: 6px;
+    }
+  
+    .searchbar button {
+      padding: 4px;
+    }
+  
+    .searchbar .fa-search {
+      font-size: 12px;
+    }
+  
+    .login,
+    .signin {
+      font-size: 12px;
+      padding: 5px 8px;
+    }
+  }
+
+/*****************************************************************/
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgb(228, 191, 208);
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(243, 12, 147);
+    font-size: 2rem;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: black;
+}
+
+select, input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(243, 12, 147);
+    border-radius: 5px;
+    background-color: white;
+    color: black
+}
+
+button {
+    background: rgb(243, 12, 147);
+    color: black;
+    cursor: pointer;
+    border: none;
+    
+}
+
+button:hover {
+    background: white;
+    color: rgb(243, 12, 147);
+}
+
+.results {
+    margin-top: 20px;
+    color: white;
+}
+
+.bus-card {
+    border: 1px solid rgb(243, 12, 147);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgb(192, 191, 191);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bus-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.bus-card p {
+    margin: 0 0 5px;
+    color: black;
+}
+
+.bus-card button {
+    background: rgba(224, 28, 143, 0.658);
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bus-card button:hover {
+    background: white;
+    color: rgba(243, 12, 147, 0.726);
+}
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%; /* Adjust width */
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    select, input, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .bus-card {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .bus-card h3 {
+        font-size: 1rem;
+    }
+
+    .bus-card button {
+        width: 100%; /* Full width for buttons on smaller screens */
+    }
+}
+
+/*****************************************************************************/
+/* Footer Styles */
+.footer-bottom {
+    background-color: black;
+    color: rgb(243, 12, 147);
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+   
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-bottom {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-bottom {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
