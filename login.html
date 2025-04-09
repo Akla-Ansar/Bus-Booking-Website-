@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Login </title>
+    <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="CSS/Login01.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap Link -->
+    
+</head>
+<body >
+ <!-- Navigation -->
+  <header class="header1">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="img/logo bus 1.png" alt="Logo">
+    </div>
+
+    
+    <div class="header">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html">AboutUs</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="searchbar">
+      <input type="text" id="search-input" placeholder="Search" class="hidden">
+      <button class="btn" id="search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Login and Sign-in Buttons -->
+    <div class="navact">
+      <a href="login.html" class="login">Log In</a>
+      <a href="register.html" class="signin">Sign In</a>
+    </div>
+
+    <!-- Menu Button for Responsive Navigation -->
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </header>
+
+<!--LOGIN FORM-->
+    <div class="main-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm" action="#" method="POST" onsubmit="return validateForm()">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="Type your username" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Type your password" required>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <button type="submit" class="login-btn">LOGIN</button>
+            </form>
+            <p class="or-signup">Or Sign Up Using</p>
+            <div class="social-icons">
+                <a href="https://en-gb.facebook.com/login.php/"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+            <p class="signup-link">Or Sign Up Using <a href="Register.html">SIGN UP</a></p>
+        </div>
+    </div>
+    
+
+<!--FOOTER-->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section call-section">
+            <h3>Call : 011 286 1982</h3>
+            <p>Monday to Friday: 06:00am - 18:30pm</p>
+            <p>Saturday to Sunday: 07:30am - 18:30pm</p>
+            <p>*All hours are in SriLanka  Time (SL)</p>
+            
+          </div>
+  
+          <div class="footer-section travel-section">
+            <h4>Travel Info</h4>
+            <ul>
+              <li><a href="Bus Schedule Between Districts.pdf">Schedule</a></li>
+                     
+            </ul>
+          </div>
+  
+          <div class="footer-section about-section">
+            <h4>About</h4>
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="https://forms.gle/begCMc4Vupiwnw5K9">Join Our Team</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-section policies-section">
+            <h4>Policies & Legal</h4>
+            <ul>
+              <li><a href="travel.html">Travel Policies</a></li>
+              <li><a href="term.html">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <hr>
+        <div class="footer-bottom">
+          <p>&copy; 2024 PinkBullet SafeBus Ltd. All rights reserved.</p>
+        </div>
+      </footer>
+
+    <!--Scriptr-->
+  <script src="JS/header.js"></script>
+</body>
+</html>

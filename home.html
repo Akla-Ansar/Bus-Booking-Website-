@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking HomePage</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="CSS/home.css">   
+    <link rel="stylesheet" href="CSS/footer.css">
+ 
+   
+    
+
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Link -->
+
+     <!-- Font Awesome Cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+     <!-- Font Awesome Cdn -->
+ 
+</head>
+<body>
+
+    <!--Navigation Start-->
+    <header class="header1">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="img/logo bus 1.png" alt="Logo">
+      </div>
+  
+      <!-- Navigation -->
+      <div class="header">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#about">AboutUs</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <!-- Search Bar -->
+      <div class="searchbar">
+        <input type="text" id="search-input" placeholder="Search" class="hidden">
+        <button class="btn" id="search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+  
+      <!-- Login and Sign-in Buttons -->
+      <div class="navact">
+        <a href="login.html" class="login">Log In</a>
+        <a href="register.html" class="signin">Sign In</a>
+      </div>
+  
+      <!-- Menu Button for Responsive Navigation -->
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <!--Navigation End-->  
+       
+    <!------------------------------------------>
+    <!-- Home Section Start -->
+    <div class="home">
+        <video autoplay muted loop id="background-video">
+            <source src="vedio/Sky.mp4" type="video/mp4">
+            
+        </video>
+        <div class="content">
+            <h5>Welcome To SriLanka</h5>
+            <h1>Visit <span class="changecontent"></span></h1>
+            <p>The road may be long, but with a bus by your side, the destination is always worth it. ...</p>
+            <a href="#book">Book Ticket</a>
+        </div>
+    </div>
+
+    <!-- Section Book Start -->
+    <section class="book" id="book">
+        <div class="container">
+  
+          <div class="main-text">
+            <h1><span>B</span>us<span>T</span>icket<span>B</span>ooking</h1>
+          </div>
+          
+          <div class="row">
+  
+            <div class="col-md-6 py-3 py-md-0" >
+              <div class="card">
+                <img src="img/b8.jpg" alt="">
+              </div>
+            </div>
+  
+            <div class="col-md-6 py-3 py-md-0"> 
+                <form>
+                    <div class="form-group">
+                      <label for="from">From</label>
+                      <select id="from" name="district" required>
+                            <option value="">--Select a District--</option>
+                            <option value="ampara">Ampara</option>
+                            <option value="anuradhapura">Anuradhapura</option>
+                            <option value="badulla">Badulla</option>
+                            <option value="batticaloa">Batticaloa</option>
+                            <option value="colombo">Colombo</option>
+                            <option value="galle">Galle</option>
+                            <option value="gampaha">Gampaha</option>
+                            <option value="hambantota">Hambantota</option>
+                            <option value="jaffna">Jaffna</option>
+                            <option value="kalutara">Kalutara</option>
+                            <option value="kandy">Kandy</option>
+                            <option value="kegalle">Kegalle</option>
+                            <option value="kilinochchi">Kilinochchi</option>
+                            <option value="kurunegala">Kurunegala</option>
+                            <option value="mannar">Mannar</option>
+                            <option value="matale">Matale</option>
+                            <option value="matara">Matara</option>
+                            <option value="monaragala">Monaragala</option>
+                            <option value="mullaitivu">Mullaitivu</option>
+                            <option value="nuwara-eliya">Nuwara Eliya</option>
+                            <option value="polonnaruwa">Polonnaruwa</option>
+                            <option value="puttalam">Puttalam</option>
+                            <option value="ratnapura">Ratnapura</option>
+                            <option value="trincomalee">Trincomalee</option>
+                            <option value="vavuniya">Vavuniya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="to">To</label>
+                      <select id="to" name="district" required>
+                            <option value="">--Select a District--</option>
+                            <option value="ampara">Ampara</option>
+                            <option value="anuradhapura">Anuradhapura</option>
+                            <option value="badulla">Badulla</option>
+                            <option value="batticaloa">Batticaloa</option>
+                            <option value="colombo">Colombo</option>
+                            <option value="galle">Galle</option>
+                            <option value="gampaha">Gampaha</option>
+                            <option value="hambantota">Hambantota</option>
+                            <option value="jaffna">Jaffna</option>
+                            <option value="kalutara">Kalutara</option>
+                            <option value="kandy">Kandy</option>
+                            <option value="kegalle">Kegalle</option>
+                            <option value="kilinochchi">Kilinochchi</option>
+                            <option value="kurunegala">Kurunegala</option>
+                            <option value="mannar">Mannar</option>
+                            <option value="matale">Matale</option>
+                            <option value="matara">Matara</option>
+                            <option value="monaragala">Monaragala</option>
+                            <option value="mullaitivu">Mullaitivu</option>
+                            <option value="nuwara-eliya">Nuwara Eliya</option>
+                            <option value="polonnaruwa">Polonnaruwa</option>
+                            <option value="puttalam">Puttalam</option>
+                            <option value="ratnapura">Ratnapura</option>
+                            <option value="trincomalee">Trincomalee</option>
+                            <option value="vavuniya">Vavuniya</option>
+                     </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="date">Date</label>
+                      <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group toggle-group">
+                      <label>Return</label>
+                      <input type="checkbox" id="return-toggle">
+                    </div>
+                    <div class="form-group return-date" style="display: none;">
+                      <label for="return-date">Return Date</label>
+                      <input type="date" id="return-date" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="passengers">No of Passengers</label>
+                      <input type="number" id="passengers" placeholder="No of Passengers">
+                    </div>
+                    <div class="buttons">
+                      <!-- Search Button as a Link -->
+                      <a href="search.html" class="btn search-btn" id="search" disabled>Search</a>
+                      <button type="reset" class="btn reset-btn" id="reset">Reset</button>
+                    </div>
+                </form> 
+            </div>
+  
+          </div>
+        </div>
+      </section>
+      <!-- Section Book End -->
+
+
+     <!-- Section Packages Start -->
+    <section class="packages" id="packages">
+        <div class="container">
+          
+          <div class="main-txt">
+            <h1><span>P</span>ackages</h1>
+          </div>
+  
+          <div class="row" style="margin-top: 30px;"> 
+                <div class="col-md-4 py-3 py-md-0">
+    
+                    <div class="card">
+                        <img src="img/c5.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Galle To Jaffna</h3>
+                            <p>Travel from the southern beaches of Galle to the vibrant culture of Jaffna. Enjoy a scenic journey through Sri Lanka's diverse landscapes!</p>
+                            
+                            <h6>Price: <strong>Rs.900 </strong></h6>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+    
+                    <div class="card">
+                        <img src="img/c9.jpg" alt="">
+                        <div class="card-body">
+                        <h3>Kandy To Colombo </h3>
+                        <p>Journey from the serene highlands of Kandy to the bustling city of Colombo. A comfortable ride through stunning views and vibrant towns awaits you.</p>
+                        
+                        <h6>Price: <strong>Rs.600</strong></h6>
+                        <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+    
+                    <div class="card">
+                        <img src="img/c1.jpg" alt="">
+                        <div class="card-body">
+                        <h3>Anuradhapura To Polonnaruwa</h3>
+                        <p>Explore Sri Lanka's ancient heritage as you travel from Anuradhapura to Polonnaruwa. A short journey through the heart of the cultural triangle.</p>
+                            
+                        <h6>Price: <strong> Rs.400</strong></h6>
+                        <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+    
+                </div>
+  
+  
+  
+            </div>     
+            
+            <div class="row" style="margin-top: 30px;"> 
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="img/c3.avif" alt="">
+                        <div class="card-body">
+                            <h3>Colombo to Nuwara Eliya</h3>
+                            <p>Travel from the bustling city of Colombo to the cool hill station of Nuwara Eliya. Enjoy breathtaking views of tea estates and lush landscapes.</p>
+                            <h6>Price: <strong>Rs.1,200</strong></h6>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="img/c4.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Vavuniya to Jaffna</h3>
+                            <p>Journey from Vavuniya to Jaffna and experience the vibrant culture and heritage of Sri Lanka's northern region. A comfortable and scenic ride awaits you.</p>
+                            <h6>Price: <strong>Rs.500</strong></h6>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="img/b7.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Badulla to Kilinochchi</h3>
+                            <p>Explore Sri Lanka’s diverse landscapes as you travel from Badulla to Kilinochchi. A journey connecting the serene hill country with the northern plains.</p>
+                            <h6>Price: <strong>Rs.800</strong></h6>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+    </section>
+    <!-- Section Packages End -->
+
+    <!-- Section Services Start -->
+    <section class="services" id="services">
+        <div class="container">
+  
+          <div class="main-txt">
+            <h1><span>S</span>ervices</h1>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+
+            <!-- Health and Safety -->
+            <div class="col-md-3 py-3 py-md-0">
+              <div class="card">
+                <i class="fas fa-shield-alt"></i> 
+                <div class="card-body">
+                  <h3>Health and Safety</h3>
+                  <p>Travel securely with our reliable buses, ensuring safety on every journey across Sri Lanka.</p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Large Bus Network -->
+            <div class="col-md-3 py-3 py-md-0">
+              <div class="card">
+                <i class="fas fa-map"></i> 
+                <div class="card-body">
+                  <h3>Large Bus Network</h3>
+                  <p>Book tickets to any destination with access to buses covering every district in Sri Lanka.</p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Arrive on Time -->
+            <div class="col-md-3 py-3 py-md-0">
+              <div class="card">
+                <i class="fas fa-clock"></i> 
+                <div class="card-body">
+                  <h3>Arrive on Time</h3>
+                  <p>Our buses ensure punctual service, helping you reach your destination on time every time.</p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Travel Environmentally Friendly -->
+            <div class="col-md-3 py-3 py-md-0">
+              <div class="card">
+                <i class="fas fa-leaf"></i> 
+                <div class="card-body">
+                  <h3>Travel Environmentally Friendly</h3>
+                  <p>Choose sustainable travel with buses designed for eco-friendly transportation across the country.</p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          
+          
+          
+  
+          
+        </div>
+    </section>
+    <!-- Section Services End -->
+
+    <!-- Section Client Start -->
+    <section class="testimonials">
+        <div class="container">
+          <h2>What our client say</h2>
+          <div class="testimonial-cards">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <img src="img/p1.webp" alt="Client 1">
+              <p>The booking process for PinkBullet Safe Bus was seamless, and I received instant confirmation. It's the best option for hassle-free bus travel in Sri Lanka.</p>
+              <h4>Emily Carter</h4>
+              <h5>Tourist, UK</h5>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <img src="img/p3.avif" alt="Client 2">
+              <p>PinkBullet provides detailed schedules and safe bus options across Sri Lanka. Their service made my trip smooth and secure.</p>
+              <h4>Nimasha Fernando</h4>
+              <h5>Colombo, Sri Lanka</h5>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <img src="img/p4.jpg" alt="Client 3">
+              <p>I booked my PinkBullet ticket within minutes and had a safe journey. Highly recommended for reliable bus services in Sri Lanka.</p>
+              <h4>Ruwan Jayasinghe</h4>
+              <h5>Galle, Sri Lanka</h5>
+            </div>
+          </div>
+        </div>
+   </section>     
+   <!-- Section Client End -->
+
+   <!--Section Gallery Start-->
+   <div class="Gallery" id="Gallery">
+        <div class="main-txt">
+            <h1><span>G</span>allary<span>C</span>ollection</h1>
+        </div>
+        <p class="main_para">Explore the most beautiful places in Sri Lank Through Bus Travel.</p>
+        <div class="gallery_main">
+            <div class="gallery1"><img src="img/g1.jpg" alt="" height="230px"/></div>
+            <div class="gallery1"><img src="img/g2.jpg" alt="" height="230px"/></div>
+            <div class="gallery1"><img src="img/g3.jpg" alt="" height="230px"/></div>
+            <div class="gallery1"><img src="img/g4.jpg" alt="" height="230px"/></div>
+            <div class="gallery1"><img src="img/g5.jpg" alt="" height="230px"/></div>
+        </div>
+        <div class="gallery_main">
+            <div class="gallery1"><img src="img/g6.jpg" alt="" height="230px"/></div>
+            <div class="gallery1"><img src="img/g7.jpg" alt="" height="230px"/></div>
+            <div class="gallery1"><img src="img/g8.jpg" alt="" height="230px"/></div>
+            <div class="gallery1"><img src="img/g9.jpg" alt="" height="230px"/></div>
+            <div class="gallery1"><img src="img/g10.jpg" alt="" height="230px"/></div>
+        </div>
+  </div>
+   <!--Section Gallery End-->
+
+   <!-- About Start -->
+   <section class="about" id="about">
+        <div class="container">
+    
+            <div class="main-txt">
+                <h1>About <span>Us</span></h1>
+            </div>
+        
+            <div class="row" style="margin-top: 50px;">
+        
+                <div class="col-md-6 py-3 py-md-0">
+                <div class="card">
+                    <img src="img/Sl.webp" alt="" height="700px">
+                </div>
+                </div>
+        
+                <div class="col-md-6 py-3 py-md-0">
+                <h2>How Travel Agency Work</h2>
+                <p>Sri Lanka's "Pink Bullet Safe Bus" is a reliable bus ticket booking platform, offering a seamless and secure way to book your travel tickets. With user-friendly features, customers can easily search and purchase tickets for their desired routes. The platform ensures safety, comfort, and punctuality for all travelers.</p>
+                <a href="#book"><button id="about-btn">Hurry Up Book...</button></a>
+                </div>
+        
+            </div>
+    
+        </div>
+   </section>
+  <!-- About End -->
+
+  <!--Footer-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section call-section">
+        <h3>Call : 011 286 1982</h3>
+        <p>Monday to Friday: 06:00am - 18:30pm</p>
+        <p>Saturday to Sunday: 07:30am - 18:30pm</p>
+        <p>*All hours are in SriLanka  Time (SL)</p>
+        
+      </div>
+
+      <div class="footer-section travel-section">
+        <h4>Travel Info</h4>
+        <ul>
+          <li><a href="Bus Schedule Between Districts.pdf">Schedule</a></li>
+                 
+        </ul>
+      </div>
+
+      <div class="footer-section about-section">
+        <h4>About</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="https://forms.gle/begCMc4Vupiwnw5K9">Join Our Team</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section policies-section">
+        <h4>Policies & Legal</h4>
+        <ul>
+          <li><a href="travel.html">Travel Policies</a></li>
+          <li><a href="term.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+    <div class="footer-bottom">
+      <p>&copy; 2024 PinkBullet SafeBus Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+ <!--Footer End-->
+ 
+ 
+  
+ <!--RETURN DATE SCRIPT-->
+ <script>
+  /*REturn Input*/
+  document.getElementById("return-toggle").addEventListener("change", function () {
+      const returnDate = document.querySelector(".return-date");
+      if (this.checked) {
+          returnDate.style.display = "block";
+      } else {
+          returnDate.style.display = "none";
+      }
+  });
+
+
+</script>
+
+<script src="JS/header.js"></script>
+<script src="JS/validate.js"></script>
+<!--RETURN DATE SCRIPT END-->
+
+</body>
+</html>
